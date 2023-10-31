@@ -7,9 +7,10 @@
   --error: #e7195a;
 }
 body {
-  background: #f1f1f1;
+  background: #f1B3A4;
   margin: 0;
   font-family: "Poppins";
+  color: #f13a44;
 }
 header {
   background: #fff;
@@ -22,12 +23,23 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
-header a {
-  color: #333;
+header {
+  background-color: #f1B3A4;
+  color: #f13a44;
   text-decoration: none;
 }
 .pages{
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
+}
+.categoryDetails {
+  display: flex;
+  color: #660008;
+}
+.title {
+  margin-left: 45%;
+}
+.offer {
+  font-size: 20px;
 }
