@@ -27,6 +27,7 @@ const Categories = () => {
           <CategoryDetails key={category._id} category={category} />
         ))}
       </div>
+      <p className="arrows">arrow component goes here</p>
     </div>
   )
 }
