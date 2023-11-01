@@ -19,6 +19,12 @@ const Home = () => {
     return (
         <div className="product">
             <h1>Item's Name</h1>
+            <img src="#" alt="Image" />
+            <p>Price  20$
+                <img src="#" alt="flavor" />
+            </p>
+            <p>Description</p>
+            <p>Featuring Fresh Strawberries in a moist Vanilla Based with Strawberry-Infused Frosting.</p>
             <h3>Reviews</h3>
             <div className="reviews">
                 {reviews && reviews.map((review) => (
