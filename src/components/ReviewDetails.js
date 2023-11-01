@@ -11,5 +11,3 @@ const ReviewDetails = ({ review }) => {
     )
 }
 export default ReviewDetails;
-
-//Hello kamal
