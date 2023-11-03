@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import CategoryDetails from "../components/CategoryDetails";
+import "./Categories.css";
 
 const Categories = () => {
   const [categories, setCategories] = useState(null);

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+body {
+  background: #f1B3A4;
+  margin: 0;
+
+}
+
+body .aboutTitle {
+  font-family: "knewave";
+  color: #f13a44;
+}
+
+body .quote {
+  font-family: 'Jockey One';
+  color: #f13a44;
+}
+
+body .aboutDescription {
+  font-family: 'Jockey One';
+  color: #660008;
+}

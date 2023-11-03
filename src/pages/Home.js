@@ -1,3 +1,5 @@
+import "./Home.css";
+
 const Home = () => {
   //we can fetch data here if we decided to make the page dynamic
   return (

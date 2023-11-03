@@ -1,6 +1,7 @@
 // import { useEffect, useState } from "react";
 
 // import aboutDetails from "../components/aboutDetails";
+import './About.css';
 
 const About = () => {
   // we can add a table for about in the back-end and fetch data from the data base if we decided to make it dynamic

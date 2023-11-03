@@ -1,3 +1,5 @@
+import "./Contact.css";
+
 const Contact = () => {
   //we can fetch data here if we decided to make the page dynamic
   return (

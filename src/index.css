@@ -1,5 +1,9 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
 /* layout */
 :root {
@@ -9,7 +13,7 @@
 body {
   background: #f1B3A4;
   margin: 0;
-  font-family: "Poppins";
+  font-family: 'Kavoon';
   color: #f13a44;
 }
 header {
