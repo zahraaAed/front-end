@@ -3,9 +3,9 @@ import cake from '../images/strawberry.png';
 import '../components/smallProduct.css';
 const product = () => {
     return (
-<div className="product">
-    <div className="products">
-        <img src={cake} alt="cake" className="images"/>
+<div className="small-product">
+    <div className="small-products">
+        <img src={cake} alt="cake" className="image"/>
 <div className="price">
 <p> 20$</p>
 </div>

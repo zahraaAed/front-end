@@ -24,7 +24,7 @@ const ProductPage = () => {
                 <SmallProduct />
                 <SmallProduct />
               </div>
-            
+              </div>
             <div className="product1">
               <div className="title">
                 <h4>Icecream</h4>
@@ -34,7 +34,7 @@ const ProductPage = () => {
                 <SmallProduct2 />
               </div>
             </div>
-          </div>
+          
         </div>
       </div>
     </>

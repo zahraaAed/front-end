@@ -3,9 +3,9 @@ import icecream from "../images/icecream.png";
 import "../components/icecream.css";
 const product = () => {
     return (
-<div className="product">
-    <div className="products">
-        <img src={icecream} alt="icecream" className="image"/>
+<div className="icecream-product">
+    <div className="icecream-products">
+        <img src={icecream} alt="icecream" className="img"/>
 
 <div className="price">
 <p> 20$</p>
