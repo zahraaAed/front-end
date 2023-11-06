@@ -6,6 +6,7 @@ import Product from './components/smallProduct';
 import Filter from './components/Filter';
 import ProductPage from './pages/product';
 import ProductIcecream from './components/icecream';
+import Category from "./pages/category";
 
 function App (){
   return (
@@ -18,6 +19,7 @@ function App (){
           <Route path='/productIcecream' element={<ProductIcecream />} />
           <Route path='/filter' element={<Filter />} />
           <Route path='/productPage' element={<ProductPage/>}/>
+          <Route path='/categoryPage' element={<Category/>}/>
       
         </Routes>
       </BrowserRouter>

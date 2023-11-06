@@ -1,0 +1,40 @@
+body{
+    background-color: #F1B3A4;
+}
+.heading{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #F13A44;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'knewave';
+  
+}
+.category-product{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+}
+.categoryItem{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+q{
+    font-family: "jockey+One";
+}
+h4{
+    text-align:center;
+    font-family: "jockey+One";
+}
+@media screen and (max-width:600px) {
+    .category-product {display: flex; flex-direction:column ;}
+    .heading{text-align: center;}
+    
+ 
+  }

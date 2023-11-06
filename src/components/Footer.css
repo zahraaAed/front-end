@@ -11,6 +11,7 @@
     font-weight: bold;
     margin: 20px 0;
     color: #F13A44;
+    font-family: "jockey+One";
 }
 
 .icons {
@@ -38,4 +39,5 @@
 .icon-text {
     margin-top: 5px;
     color: #F13A44;
+    font-family: "jockey+One";
 }
