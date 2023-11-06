@@ -1,0 +1,36 @@
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #F13A44;
+    text-align: center;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .products {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    margin: 20px 0; 
+  }
+  
+  .product1 {
+    width: 50%;
+    display: flex;
+    flex-direction:column;
+  }
+  
+  .products-row {
+    display: flex;
+    flex-direction:row;
+  }
+  
