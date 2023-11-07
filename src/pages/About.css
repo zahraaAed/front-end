@@ -10,14 +10,24 @@ body {
 body .aboutTitle {
   font-family: "knewave";
   color: #f13a44;
+  font-size: 32px;
 }
 
 body .quote {
   font-family: 'Jockey One';
   color: #f13a44;
+  font-size: 24px;
+}
+
+body .aboutBody {
+  margin: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 body .aboutDescription {
   font-family: 'Jockey One';
   color: #660008;
+  font-size: 20px;
+  width: 100%;
 }

@@ -1,4 +1,5 @@
 const CategoryDetails = ({ category }) => {
+
   return (
     <section>
       <div className="categoryDetails">

@@ -3,6 +3,7 @@ import "./Contact.css";
 const Contact = () => {
   //we can fetch data here if we decided to make the page dynamic
   return (
+    <div className="Whole">
     <div className="Contact">
       <div className="title">
         <p className="contactTitle">Contact us</p>
@@ -12,6 +13,9 @@ const Contact = () => {
       <section className="feedback">feedback component goes here</section>
       <section className="footer">footer component goes here</section>
     </div>
+    </div>
+
+
   )
 }
 

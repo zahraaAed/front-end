@@ -25,7 +25,7 @@ const About = () => {
         <p className="quote">Explore The Sweet Blooms Kitchen today & let your taste buds bloom with delight</p>
       </div>
       <div className="aboutBody">
-        <img src="#" alt="image" />
+        <img src="#" alt="image" className='aboutImage'/>
         <p className="aboutDescription">Welcome to The Sweet Blooms Kitchen, where every delicious bite is a blossoming journey of love and flavour. Our charming online dessert shop, based in the of Tripoli, is led by a dedicated mom with a passion for creating the most delectable home made petites fours in town.</p>
       </div>
     </div>

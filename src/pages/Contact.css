@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+
+h1{
+  margin: 0;
+}
+
+.App{
+  background-color: white;
+  background-image: url("../images/background-image.png");
+}
+
+.Contact {
+  width: 100%;
+  height: 71.8vh;
+  background-size: cover;
+}
+body .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+body .contactTitle {
+  margin: 0;
+  font-family: "knewave";
+  color: #f13a44;
+  font-size: 40px;
+  height: 100px;
+}
+body .contactQuote {
+  margin: 0;
+  font-family: 'Jockey One';
+  color: #f13a44;
+  font-size: 32px;
+  height: 34px;
+}
+body .quote {
+  margin: 35px;
+  margin-top: 50px;
+  font-family: 'Jockey One';
+  color: #f13a44;
+  font-size: 24px;
+  height: 26px;
+}
+body .feedback {
+  height: 130px;
+  width: 70%;
+  margin: auto;
+  border: 1px solid  rgb(0, 0, 0);
+}
+body .footer {
+  background-image: url("../images/background-image.png");
+
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  border: 1px solid  rgb(0, 0, 0);
+}

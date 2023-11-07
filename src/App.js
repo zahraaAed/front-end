@@ -4,6 +4,7 @@ import Categories from "./pages/Categories";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Admin from "./pages/Admin";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path = "/categories" element = {<Categories/>}/>
             <Route path = "/about" element = {<About/>}/>
             <Route path = "/contact" element = {<Contact/>}/>
+            <Route path = "/admin" element = {<Admin/>}/>
           </Routes>
         </div>
       </BrowserRouter>

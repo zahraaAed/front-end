@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+body {
+  background: #f1B3A4;
+  margin: 0;
+}
+body .title {
+  margin-left: auto;
+  display: flex;
+}
+body .offer {
+  margin: 0;
+  font-family: "knewave";
+  color: #f13a44;
+  font-size: 32px;
+  height: 34px;
+}
+body .quote {
+  margin: 0;
+  font-family: 'Jockey One';
+  color: #f13a44;
+  font-size: 20px;
+  height: 22px;
+}
+body .categoryDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Karla";
+  color: #660008;
+  font-size: 20px;
+}
+
+body .categories {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+  flex-wrap: wrap;
+}
+
+body .arrows {
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  border: 1px solid white;
+  width: 100%;
+}
