@@ -5,8 +5,8 @@ const ProductForm = () => {
   const [productName, setProductName] = useState("");
   const [description, setProductdescription] = useState("");
   const [categoriesId, setProductCategoriesId] = useState("");
-  const [flavours, setProductFlavours] = useState("");
-  const [bestSeller, setBestSeller] = useState("");
+  const [flavours, setProductFlavours] = useState([]);
+  const [bestSeller, setBestSeller] = useState(null);
   const [price, setProductPrice] = useState("");
   const [image, setProductImage] = useState("");
 
@@ -30,8 +30,8 @@ const ProductForm = () => {
       setProductName("");
       setProductdescription("");
       setProductCategoriesId("");
-      setProductFlavours("");
-      setBestSeller("");
+      setProductFlavours([]);
+      setBestSeller(null);
       setProductPrice("");
       setProductImage("");
       setError(null);
