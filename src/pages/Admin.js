@@ -5,10 +5,14 @@ import ProductForm from "../components/ProductForm";
 import ReviewForm from "../components/ReviewForm";
 import FeedbackForm from "../components/FeedbackForm";
 import CategoryDelete from "../components/CategoryDelete";
+import ProductDelete from "../components/ProductDelete";
 import ReviewDelete from "../components/ReviewDelete";
 import "./Admin.css";
 
 const Admin = () => {
+
+//categories
+
   const [categories, setCategories] = useState(null);
   useEffect(() => {
     const fetchCategories = async () => {
@@ -21,6 +25,8 @@ const Admin = () => {
     }
     fetchCategories();
   },[]);
+
+//reviews
 
   const [reviews, setReviews] = useState(null);
   useEffect(() => {
@@ -35,9 +41,25 @@ const Admin = () => {
     fetchReviews();
   },[]);
 
+//products
+
+const [products, setProducts] = useState(null);
+useEffect(() => {
+  const fetchProducts = async () => {
+    const responseProducts = await fetch("/api/productRoute/"); //remember to change URL after developement phase so every request points to the right end point
+    const jsonProducts = await responseProducts.json();
+
+    if (responseProducts.ok) {
+      setProducts(jsonProducts);
+    }
+  }
+  fetchProducts();
+},[]);
+
   return (
     <div className="AdminPanel">
       <CategoryDelete categories={categories} />
+      <ProductDelete products={products} />
       <ReviewDelete reviews={reviews} />
       <CategoryForm />
       <ProductForm />

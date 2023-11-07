@@ -1,0 +1,27 @@
+.carousel-container {
+  width: 80%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: fit-content;
+  height: fit-content;
+  
+}
+
+.carousel-slide {
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  display: none;
+  text-align: center;
+  width: fit-content;
+  background-color: #ffffff00;
+
+}
+
+.carousel-slide.active {
+  display: flex;
+  height:fit-content;
+  width: fit-content;
+}
