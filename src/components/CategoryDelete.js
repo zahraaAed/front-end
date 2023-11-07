@@ -8,7 +8,7 @@ const CategoryDelete = ({categories}) => {
     try {
       e.preventDefault();
       const category = categories.find((category) => category.categoryName === categoryName);
-      console.log(category)
+      // console.log(category)
 
       const responseCategory = await fetch("/api/categoryRoute/delete/" + category._id, {
         method: "DELETE"
