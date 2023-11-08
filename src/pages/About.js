@@ -2,7 +2,7 @@
 
 // import aboutDetails from "../components/aboutDetails";
 import './About.css';
-
+import Rose from '../images/Rose-and-Cardamon-shortbread1-scaled.jpg'
 const About = () => {
   // we can add a table for about in the back-end and fetch data from the data base if we decided to make it dynamic
   // const [about, setAbout] = useState(null);
@@ -20,13 +20,15 @@ const About = () => {
   // },[]);
   return (
     <div className="About">
-      <div className="title">
-        <p className="aboutTitle">About us</p>
-        <p className="quote">Explore The Sweet Blooms Kitchen today & let your taste buds bloom with delight</p>
+      <div className="about-components">
+        <p className="about-title">About us</p>
+        <p className="about-quote">Explore The Sweet Blooms Kitchen today & let your taste buds bloom with delight</p>
       </div>
-      <div className="aboutBody">
-        <img src="#" alt="image" />
-        <p className="aboutDescription">Welcome to The Sweet Blooms Kitchen, where every delicious bite is a blossoming journey of love and flavour. Our charming online dessert shop, based in the of Tripoli, is led by a dedicated mom with a passion for creating the most delectable home made petites fours in town.</p>
+      <div className="about-bodyy">
+        <div className="about-imgg ">
+          <img className='rose-img' src ={Rose} alt="Rose and Cardamon" />
+        </div>
+        <p className="abouts-description">Welcome to The Sweet Blooms Kitchen, where every delicious bite is a blossoming journey of love and flavour. Our charming online dessert shop, based in the of Tripoli, is led by a dedicated mom with a passion for creating the most delectable home made petites fours in town.</p>
       </div>
     </div>
   )

@@ -1,0 +1,54 @@
+
+  .logo{
+    width: 12%;
+    height: 10%;
+    padding-left: 20px;
+  }
+  .nav-container{
+    display: flex;
+    justify-content: space-between;
+    font-family: "jockey+One";
+    font-size: 15px;
+    font-family: 'Jockey One', sans-serif;
+    text-decoration: none;
+    width: 100%;
+    background-color:#F1B3A4 ;
+  }
+  .nav-h{
+position: absolute;
+background-color: transparent!important;
+  }
+  .nav-container h1{
+    color:#F13A44;
+    text-decoration: none;
+  }
+  .links{
+    text-decoration: none;
+  }
+.nav-buttons{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-right: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .nav-container  {
+    display: flex;
+    font-size: 10px;
+  }
+ 
+  .nav-buttons{
+    display: flex;
+    gap: 10px;
+  }
+
+  .logo{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+  }
+
+}

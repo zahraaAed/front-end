@@ -1,49 +1,39 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 /* layout */
-:root {
-  --primary: #1aac83;
-  --error: #e7195a;
-}
-body {
-  background: #f1B3A4;
+body{
   margin: 0;
-  font-family: 'Kavoon';
-  color: #f13a44;
-}
-header {
-  background: #fff;
-}
-header .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header {
-  background-color: #f1B3A4;
-  color: #f13a44;
-  text-decoration: none;
-}
-.pages{
-  max-width: 1400px;
-  padding: 20px;
-  margin: 0 auto;
-}
-.categoryDetails {
-  display: flex;
-  color: #660008;
-}
-.title {
-  margin-left: 45%;
-}
-.offer {
-  font-size: 20px;
-}
+}  
+
+html{
+    --primary: #1aac83;
+    --error: #e7195a;
+      font-family: 'Kavoon';
+      color: #f13a44;
+
+  }
+
+  header .container {
+    display: flex;
+    justify-content: center;
+  }
+  header {
+    color: #f13a44;
+    text-decoration: none;
+  }
+  .pages{
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .categoryDetails {
+    display: flex;
+    color: #660008;
+  }
+
+  .offer {
+    font-size: 20px;
+  }

@@ -1,23 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
-body {
-  background: #f1B3A4;
-  margin: 0;
 
+
+.About{
+  background-color: #f1b3a4;
+  width: 100%;
+  height: 100%;
 }
 
-body .aboutTitle {
-  font-family: "knewave";
-  color: #f13a44;
+.about-components{
+  display: flex;
+  flex-direction:column;
 }
 
-body .quote {
-  font-family: 'Jockey One';
-  color: #f13a44;
+.about-title{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
 }
 
-body .aboutDescription {
-  font-family: 'Jockey One';
-  color: #660008;
+.about-quote{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.about-bodyy {
+  display: flex;
+  margin-top:5%;
+  gap: 70px;
+  width:100%;
+
+  justify-content: center;
+}
+.about-imgg{
+  display: flex;
+  width: 500px;
+  height: 300px;
+}
+
+.abouts-description{
+  display: flex;
+  width: 50%;
+  font-size: 30px;
+ }
+
+@media all and (max-width:768px) {
+
+.about-components{
+  display: flex;
+  flex-direction: column;
+}
+  
+.about-title{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.about-quote{
+  text-align: center;
+  font-size: 20px;
+}
+.about-bodyy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}  
+.rose-img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.about-imgg{
+  display: flex;
+  width: 50%;
+  height: 150px;
+}
+.abouts-description{
+  display: flex;
+  width: 300px;
+  height: 200px;
+  font-size: 15px;
+ }
 }

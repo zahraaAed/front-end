@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+
+
+
+
+
+
+ .footer {
+    text-align: center;
+    background-color: #F1B3A4;
+    height: 200px;
+    padding-top: 50px;
+}
+
+.footer-title {
+    margin-top: -50px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #F13A44;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.instagram-icon {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.location-icon{
+    display: flex;
+    align-items: center;
+
+}
+
+.icon-text {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+    color: #F13A44;
+}
+
+@media screen and (max-width: 768px) {
+
+    .footer{
+        width: 100%;
+        height: 150px;
+    }
+
+
+    .footer-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .icon-text {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+}
