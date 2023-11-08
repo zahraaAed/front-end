@@ -31,10 +31,12 @@ q{
 h4{
     text-align:center;
     font-family: "jockey+One";
+    font-size: 25px;
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:750px) {
     .category-product {display: flex; flex-direction:column ;}
     .heading{text-align: center;}
+    img{ width: 20%;height: 50%;;}
     
  
   }
