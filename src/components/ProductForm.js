@@ -81,7 +81,7 @@ const ProductForm = () => {
         />
         <label>Image</label>
         <input
-          type="text"
+          type="file"
           onChange={(e) => setProductImage(e.target.value)}
           value={image}
         />

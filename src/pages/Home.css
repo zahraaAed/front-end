@@ -1,14 +1,76 @@
-/* body .Home {
-  background: #f1B3A4;
-  background-image: url("../images/background-home.png");
-  background-size: cover;
-  margin: 0;
-  padding-top: 230px;
-  padding-left: 20%;
-  padding-right: 20%;
-  height: 700px;
+.home{
   width: 100%;
-} */
-.background {
-  z-index: -1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  padding-bottom: 135px;
 }
+
+.home-carousel {
+  z-index: -1;
+    object-fit: contain;
+  }
+
+.home-quote{
+  background-color: #cfb5f06d;
+  width: 60%;
+  margin-top: 20%;
+}
+.home-links{
+  display: flex;
+  gap: 50px;
+}
+.visit-menu-link{
+  text-decoration: none;
+  color: #1da7ca;
+
+}
+.best-seller-link{
+  text-decoration: none;
+  color:#CFB5F0;
+
+}
+
+.visit-menu-button{
+  border-radius: 10px;
+  background-color: #CFB5F0;
+  font-family: 'Jockey One';
+  font-size: 40px;
+  border: 0;
+}
+
+.best-sellers-button{
+  border-radius: 10px;
+  font-family: 'Jockey One';
+  font-size: 40px;
+  color: #CFB5F0;
+  border: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  .home-quote{
+      margin-top: 150px ;
+      width: 80%;
+      font-size: 20px;
+  }
+  
+  .home-links{
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+  }
+  .visit-menu-button{
+      font-size: 30px;
+  }
+  .best-sellers-button{
+      font-size: 30px;  
+  }
+}
+
