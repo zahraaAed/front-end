@@ -1,0 +1,36 @@
+.createFeedback{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.label-button{
+  border: 1px solid brown;
+  margin-top: -20px;
+}
+
+.label {
+  margin: 25px;
+  display: flex;
+  font-size: 25px;
+  
+
+}
+.feedback-space{
+  margin: 40px 50px;
+  opacity: 0.5;
+  width: 700px;
+  height: 50px;
+}
+
+.feedback-button{
+  font-family: "jockey one";
+  font-size: 20px;
+  color: white;
+  width: 150px;
+  height: 50px;
+  margin-right: 30px;
+  opacity: 0.7;
+  background-color: #D77A46;
+  border: none;
+  border-radius: 70px;
+}

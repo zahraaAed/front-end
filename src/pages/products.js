@@ -42,10 +42,10 @@ const Products = () => {
             <div className="products-row">
               {/* <SmallProduct />
                 <SmallProduct /> */}
-              {Product &&
+              {/* {Product &&
                 Product.map((products) => (
                   <ProductComponent key={products._id} products={products} />
-                ))}
+                ))} */}
             </div>
           </div>
         </div>

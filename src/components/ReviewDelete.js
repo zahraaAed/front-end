@@ -5,31 +5,34 @@ const ReviewDelete = ({reviews}) => { //must rewrite it later in the right way, 
   const [error, setError] = useState(null);
 
   const handleDeleteReview = async (e) => {
-    try {
-      e.preventDefault();
-      const review = reviews.find((review) => review.name === name);
-      // console.log(review)
+    if(window.confirm("are you sure you want to delete?")){
+      try {
+        e.preventDefault();
+        const review = reviews.find((review) => review.name === name);
+        // console.log(review)
 
-      const responseReview = await fetch("/api/reviewRoute/delete/" + review._id, {
-        method: "DELETE"
-      });
-      const jsonReview = await responseReview.json();
-      if (!responseReview.ok) {
-        setError(jsonReview.error);
+        const responseReview = await fetch("/api/reviewRoute/delete/" + review._id, {
+          method: "DELETE"
+        });
+        const jsonReview = await responseReview.json();
+        if (!responseReview.ok) {
+          setError(jsonReview.error);
+        }
+        if (responseReview.ok) {
+          setCustomerName("");
+          setError(null);
+          console.log("Review Deleted", jsonReview);
+        }
+      } catch (error) {
+        console.log(error);
       }
-      if (responseReview.ok) {
-        setCustomerName("");
-        setError(null);
-        console.log("Review Deleted", jsonReview);
-      }
-    } catch (error) {
-      console.log(error);
+      document.getElementById("deleteReviewId").submit();
     }
   }
 
   return (
     <>
-      <form className="deleteReview" onSubmit={handleDeleteReview}>
+      <form className="deleteReview" id="deleteReviewId" onSubmit={handleDeleteReview}>
         <h3>Delete a review</h3>
         <label>Customer Name</label>
         <input

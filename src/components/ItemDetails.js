@@ -12,7 +12,7 @@ const ItemDetails = ({ product }) => { //product props needs to be passed after 
             />
           )}
         <h4>Price {product.price}</h4>
-        <img src="../images/flavorIcons/strawberry.png" alt={product.flavours} /> {/* will change later */}
+        <img src="../images/flavorIcons/strawberry.png" alt="flavor" /> {/* will change later */}
         <h3>Description</h3>
         <p>{product.description}</p>
       </div>

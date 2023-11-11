@@ -5,31 +5,34 @@ const CategoryDelete = ({categories}) => {
   const [error, setError] = useState(null);
 
   const handleDeleteCategory = async (e) => {
-    try {
-      e.preventDefault();
-      const category = categories.find((category) => category.categoryName === categoryName);
-      // console.log(category)
+    if(window.confirm("are you sure you want to delete?")){
+      try {
+        e.preventDefault();
+        const category = categories.find((category) => category.categoryName === categoryName);
+        // console.log(category)
 
-      const responseCategory = await fetch("/api/categoryRoute/delete/" + category._id, {
-        method: "DELETE"
-      });
-      const jsonCategory = await responseCategory.json();
-      if (!responseCategory.ok) {
-        setError(jsonCategory.error);
+        const responseCategory = await fetch("/api/categoryRoute/delete/" + category._id, {
+          method: "DELETE"
+        });
+        const jsonCategory = await responseCategory.json();
+        if (!responseCategory.ok) {
+          setError(jsonCategory.error);
+        }
+        if (responseCategory.ok) {
+          setCategoryName("");
+          setError(null);
+          console.log("Category Deleted", jsonCategory);
+        }
+      } catch (error) {
+        console.log(error);
       }
-      if (responseCategory.ok) {
-        setCategoryName("");
-        setError(null);
-        console.log("Category Deleted", jsonCategory);
-      }
-    } catch (error) {
-      console.log(error);
+      document.getElementById("deletCategoryId").submit();
     }
   }
 
   return (
     <>
-      <form className="deleteCategory" onSubmit={handleDeleteCategory}>
+      <form className="deleteCategory" id="deletCategoryId" onSubmit={handleDeleteCategory}>
         <h3>Delete a category</h3>
         <label>Category Name</label>
         <input
@@ -38,10 +41,10 @@ const CategoryDelete = ({categories}) => {
           value={categoryName}
         />
         <button>Delete Category</button>
+        {}
         {error && <div className="CategoryDeleteError">{error}</div>}
       </form>
     </>
   );
 };
-
 export default CategoryDelete;

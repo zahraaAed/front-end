@@ -5,31 +5,34 @@ const ProductDelete = ({products}) => {
   const [error, setError] = useState(null);
 
   const handleDeleteProduct = async (e) => {
-    try {
-      e.preventDefault();
-      const product = products.find((product) => product.productName === productName);
-      // console.log(product)
+    if(window.confirm("are you sure you want to delete?")){
+      try {
+        e.preventDefault();
+        const product = products.find((product) => product.productName === productName);
+        // console.log(product)
 
-      const responseProduct = await fetch("/api/productRoute/delete/" + product._id, {
-        method: "DELETE"
-      });
-      const jsonProduct = await responseProduct.json();
-      if (!responseProduct.ok) {
-        setError(jsonProduct.error);
+        const responseProduct = await fetch("/api/productRoute/delete/" + product._id, {
+          method: "DELETE"
+        });
+        const jsonProduct = await responseProduct.json();
+        if (!responseProduct.ok) {
+          setError(jsonProduct.error);
+        }
+        if (responseProduct.ok) {
+          setProductName("");
+          setError(null);
+          console.log("Product Deleted", jsonProduct);
+        }
+      } catch (error) {
+        console.log(error);
       }
-      if (responseProduct.ok) {
-        setProductName("");
-        setError(null);
-        console.log("Product Deleted", jsonProduct);
-      }
-    } catch (error) {
-      console.log(error);
-    }
+      document.getElementById("deleteProductId").submit();
   }
+}
 
   return (
     <>
-      <form className="deleteProduct" onSubmit={handleDeleteProduct}>
+      <form className="deleteProduct" id="deleteProductId" onSubmit={handleDeleteProduct}>
         <h3>Delete a product</h3>
         <label>Product Name</label>
         <input

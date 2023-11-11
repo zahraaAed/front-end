@@ -1,4 +1,5 @@
 import "./Contact.css";
+import FeedbackForm from "../components/FeedbackForm";
 
 const Contact = () => {
   //we can fetch data here if we decided to make the page dynamic
@@ -12,6 +13,7 @@ const Contact = () => {
             Let's Chat, Order, and Create Dessert Magic Together!
           </p>
         </div>
+        <FeedbackForm />
       </div>
     </div>
   );

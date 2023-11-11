@@ -29,12 +29,12 @@ const Categories = () => {
           "Discover Your Perfect Dessert Getaway"
         </p>
       </div>
-      {/* <div className="">
+      <div className="">
         {categories &&
           categories.map((category) => (
             <CategoryDetails key={category._id} category={category} />
           ))}
-      </div> */}
+      </div>
       <div className="category-products">
         <div className="category-item">
           <Link className="links" to="/">

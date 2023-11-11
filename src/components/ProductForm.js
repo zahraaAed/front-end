@@ -14,7 +14,15 @@ const ProductForm = () => {
 
   const handleSubmitProduct = async (e) => {
     e.preventDefault();
-    const product = { productName, description, categoriesId, flavours, bestSeller, price, image };
+    const product = {
+      productName,
+      description,
+      categoriesId,
+      flavours,
+      bestSeller,
+      price,
+      image,
+    };
     const responseProduct = await fetch("/api/productRoute/post", {
       method: "POST",
       body: JSON.stringify(product),
@@ -82,8 +90,7 @@ const ProductForm = () => {
         <label>Image</label>
         <input
           type="file"
-          onChange={(e) => setProductImage(e.target.value)}
-          value={image}
+          onChange={(e) => setProductImage(e.target.files[0])}
         />
         <button>Add Product</button>
         {error && <div className="ProductAddError">{error}</div>}
