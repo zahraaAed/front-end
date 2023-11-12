@@ -2,10 +2,6 @@ import { useEffect, useState } from "react";
 
 import CategoryDetails from "../components/CategoryDetails";
 import "./Categories.css";
-import wafer from "../images/wafer.png";
-import cake from "../images/cake.png";
-import petitfour from "../images/petitfour.png";
-import { Link } from "react-router-dom";
 
 const Categories = () => {
   const [categories, setCategories] = useState(null);
@@ -34,32 +30,6 @@ const Categories = () => {
           categories.map((category) => (
             <CategoryDetails key={category._id} category={category} />
           ))}
-      </div>
-      <div className="category-products">
-        <div className="category-item">
-          <Link className="links" to="/">
-            <img src={cake} alt="cake" />
-          </Link>
-          <Link className="links" to="/">
-            <h4 className="category-headers">Cakes & Icecream</h4>
-          </Link>
-        </div>
-        <div className="category-item">
-          <Link className="links" to="/">
-            <img src={wafer} alt="wafer" />
-          </Link>
-          <Link className="links" to="/">
-            <h4 className="category-headers">wafer</h4>
-          </Link>
-        </div>
-        <div className="category-item">
-          <Link className="links" to="/">
-            <img src={petitfour} alt="petitfour" />
-          </Link>
-          <Link className="links" to="/">
-            <h4 className="category-headers">Petit four</h4>
-          </Link>
-        </div>
       </div>
     </div>
   );
