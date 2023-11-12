@@ -7,7 +7,7 @@ const CategoryForm = () => {
   const handleSubmitCategory = async (e) => {
     e.preventDefault();
     const category = { categoryName };
-    const responseCategory = await fetch("/api/categoryRoute/post", {
+    const responseCategory = await fetch("http://localhost:4000/api/categoryRoute/post", {
       method: "POST",
       body: JSON.stringify(category),
       headers: {

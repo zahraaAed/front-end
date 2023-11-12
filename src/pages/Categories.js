@@ -9,18 +9,37 @@ import { Link } from "react-router-dom";
 
 const Categories = () => {
   const [categories, setCategories] = useState(null);
+  // console.log(categories);
 
+  // useEffect(() => {
+  //   const fetchCategories = async () => {
+  //     const responseCategories = await fetch("http://localhost:4000/api/categoryRoute/"); //remember to change URL after developement phase so every request points to the right end point
+  //     const jsonCategories = await responseCategories.json();
+  //     console.log(jsonCategories)
+
+  //     if (responseCategories.ok) {
+  //       setCategories(jsonCategories);
+  //     }
+  //   };
+  //   fetchCategories();
+  // }, []);
   useEffect(() => {
-    const fetchCategories = async () => {
-      const responseCategories = await fetch("/api/categoryRoute/"); //remember to change URL after developement phase so every request points to the right end point
-      const jsonCategories = await responseCategories.json();
-
-      if (responseCategories.ok) {
-        setCategories(jsonCategories);
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/api/categoryRoute/');
+        const result = await response.json();
+        console.log(result);
+        setCategories(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        // setLoading(false);
       }
     };
-    fetchCategories();
+
+    fetchData();
   }, []);
+
   return (
     <div className="Categories">
       <div className="category-title">
@@ -29,18 +48,18 @@ const Categories = () => {
           "Discover Your Perfect Dessert Getaway"
         </p>
       </div>
-      {/* <div className="">
+      <div className="category-item">
+        <div className="category-products">
         {categories &&
           categories.map((category) => (
             <CategoryDetails key={category._id} category={category} />
           ))}
-      </div> */}
-      <div className="category-products">
-        <div className="category-item">
-          <Link className="links" to="/">
+      </div>
+        {/* <div className="category-item">
+          <Link className="links" to="/products">
             <img src={cake} alt="cake" />
           </Link>
-          <Link className="links" to="/">
+          <Link className="links" to="/products">
             <h4 className="category-headers">Cakes & Icecream</h4>
           </Link>
         </div>
@@ -59,7 +78,7 @@ const Categories = () => {
           <Link className="links" to="/">
             <h4 className="category-headers">Petit four</h4>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

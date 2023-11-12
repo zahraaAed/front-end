@@ -1,0 +1,23 @@
+.icecream-product{
+    margin-left: 100px;
+    margin-right: 100px;
+    max-width: 50%;
+    display: flex;
+    flex-direction:column;
+
+}
+.icecream-products{
+    max-width: 100%;
+}
+.img{
+ width:100%;
+
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+
+}

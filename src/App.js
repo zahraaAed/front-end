@@ -8,6 +8,7 @@ import Admin from "./pages/Admin";
 import NavBar from "./components/NavBar";
 import Products from "./pages/products";
 import Product from "./pages/Product";
+import BestSeller from "./pages/BestSeller/BestSeller"
 
 const Layout = () => {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/Bestsellers" element={<BestSeller />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -2,8 +2,8 @@
 
  .footer {
     text-align: center;
-    background-color: #F1B3A4;
-    height: 200px;
+    background-color: #fae2e1;
+    height: 220px;
     padding-top: 50px;
 }
 
@@ -22,12 +22,14 @@
 }
 
 .instagram-icon {
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     margin: 10px;
 }
 
 .location-icon{
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
 

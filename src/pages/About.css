@@ -4,7 +4,7 @@
 
 
 .About{
-  background-color: #f1b3a4;
+  background-color: #fae2e1;
   width: 100%;
   height: 100%;
 }
@@ -31,13 +31,19 @@
   margin-top:5%;
   gap: 70px;
   width:100%;
-
   justify-content: center;
 }
 .about-imgg{
+  border: 3px solid;
+  border-radius: 5%;
   display: flex;
-  width: 500px;
+  width: 24.5%;
   height: 300px;
+}
+
+.rose-img{
+  border-radius: 5%;
+
 }
 
 .abouts-description{
@@ -67,12 +73,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }  
 .rose-img{
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: fill;
 }
 .about-imgg{
   display: flex;

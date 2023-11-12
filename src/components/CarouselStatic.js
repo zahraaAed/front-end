@@ -1,13 +1,14 @@
-import carouselImage1 from '../images/carousel/carouselImage1.png';
 import Rose from "../images/carousel/cake1.jpg";
-import carouselImage3 from '../images/carousel/carouselImage3.png';
-
+import Afif from "../images/carousel/afif-cake.jpg";
+import CheeseCake from "../images/carousel/cheesecake.jpg";
+import GardenCake from "../images/carousel/gardencake.jpg";
+import ThirdCake from "../images/carousel/thirdcake.jpg";
 import './CarouselStatic.css';
 import { useState, useEffect } from 'react';
 
 const HomeCarousel = () => {
 
-  const imageArray = [carouselImage1,Rose, carouselImage3];
+  const imageArray = [Rose, Afif,CheeseCake,GardenCake,ThirdCake];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

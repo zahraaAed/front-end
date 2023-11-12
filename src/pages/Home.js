@@ -11,10 +11,10 @@ const Home = () => {
         <HomeCarousel />
       </div>
       <div className="home">
-        <p className="home-quote">
+        <div className="home-quote">
           Welcome to The Sweet Blooms Kitchen, where every bite is a reminder of
           the warmth of home and the charm of something made with love.
-        </p>
+        </div>
         <div className="home-links">
           <button className="visit-menu-button">
             <Link className="visit-menu-link" to="/categories">
@@ -22,7 +22,7 @@ const Home = () => {
             </Link>
           </button>
           <button className="best-sellers-button">
-            <Link className="best-seller-link" to="/about">
+            <Link className="best-seller-link" to="/bestsellers">
               Best-Sellers
             </Link>
           </button>
