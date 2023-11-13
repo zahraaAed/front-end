@@ -3,10 +3,10 @@ const ProductComponent = ({ products, category }) => {
     <section>
       {products && (
         <div className="ProductComponent">
-          {/* <h4>{products.categoriesId}</h4> */}
+          <h4>{products.categoriesId}</h4>
           {products.images && (
             <img
-              src={`http://localhost:4001/${products.images}`}
+              src={`http://localhost:4000/${products.images}`}
               alt={products.productName}
               style={{ maxWidth: "200px" }}
             />

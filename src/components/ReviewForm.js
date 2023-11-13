@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const ReviewForm = () => {
+const ReviewForm = ({productId}) => {
   const [name, setCustomerName] = useState("");
   const [reviews, setReview] = useState("");
-  const [productsId, setProductId] = useState("");
+  const [productsId, setProductId] = useState(productId);
   const [error, setError] = useState(null);
 
   const handleSubmitReview = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const review = { name, reviews, productsId };
     const responseReview = await fetch("/api/reviewRoute/post", {
       method: "POST",
@@ -28,7 +28,6 @@ const ReviewForm = () => {
       console.log("new review added", jsonReview);
     }
   };
-
   return (
     <>
       <form className="createReview" onSubmit={handleSubmitReview}>
@@ -39,15 +38,17 @@ const ReviewForm = () => {
           onChange={(e) => setCustomerName(e.target.value)}
           value={name}
         />
+        <label>Review</label>
         <input
           type="text"
           onChange={(e) => setReview(e.target.value)}
           value={reviews}
         />
-        <label>Product Id</label> {/* will be replaced by product._id when placed in item page */}
+        <label></label> {/* will be replaced by product._id when placed in item page */}
         <input
+          className="id-hide"
           type="text"
-          onChange={(e) => setProductId(e.target.value)}
+          // onChange={(e) => setProductId(productId)}
           value={productsId}
         />
         <button>Send</button>

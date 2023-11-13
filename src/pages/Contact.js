@@ -1,8 +1,9 @@
 import "./Contact.css";
-
+import FeedBackForm from "../components/FeedbackForm";
 const Contact = () => {
   //we can fetch data here if we decided to make the page dynamic
   return (
+    <>
     <div className="contact">
       <div className="contact-body">
         <p className="contact-word">Contact us</p>
@@ -13,7 +14,11 @@ const Contact = () => {
           </p>
         </div>
       </div>
+    <FeedBackForm />
     </div>
+
+
+    </>
   );
 };
 

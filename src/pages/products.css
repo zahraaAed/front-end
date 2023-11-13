@@ -1,46 +1,79 @@
-.products-title {
+.products-container {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  width: 100%;
+  background-color: #fae2e1;
+  gap: 30px;
+}
+
+.products-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.products {
+  display: flex;
+  margin-left: 150px;
+  margin-top: 50px;
+}
+.products-image {
+  border: 7px solid #F13A44;
+  border-radius: 25%;
+  width: 300px;
+  height: 300px;
+}
+.products-name {
+  font-size: 25px;
   display: flex;
   justify-content: center;
-  font-size: 24px;
+}
+.products-description {
+  font-size: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.products-price {
+  width: 100%;
+  font-size: 20px;
   font-weight: bold;
-  margin: 20px 0;
-  color: #F13A44;
-  font-family: 'knewave';  
-}
-.product-content{
   display: flex;
-    flex-direction: column;
-  
+  justify-content: center;
 }
 
-.products{
-  display: flex;
-  flex-direction:row;
-}
-.product-image{
-  width: 200px;
-  height: 200px;
-}
-.first-product{
-
+@media screen and (max-width: 768px) {
+  .products-container {
     width: 100%;
     display: flex;
-    flex-direction: row;
-}
-.product-description{
-  display: flex;
-  flex-direction:column;
+    flex-direction: column;
+    align-items: center;
+  }
+  .products-content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  .products-image {
+    align-self: center;
+    width: 200px;
+    height: 200px;
+  }
+  .products {
+    align-self: center;
+    margin-top: 50px;
+    margin-right: 60px;
+  }
+  .products-name {
+    align-self: center;
+    width: 180px;
+    font-size: 15px;
+    align-self: center;
+  }
+  .products-price{
+    align-self: center;
+    font-size: 15px;
+  }
 
-
-}
-.small-product{
-  display: flex;
-    flex-direction:row;
-    justify-content: center;  
-    justify-content: space-between;
-}
-@media screen and (max-width:750px) {
-  .products {display: flex; flex-direction:column ; align-items: center;}
-  .product1 { width:50%;}
 
 }

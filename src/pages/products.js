@@ -1,145 +1,45 @@
 import React, { useState, useEffect } from "react";
-// import Header from "../components/Header";
 import "../pages/products.css";
-import Filter from "../components/Filter";
-// import SmallProduct from "../components/smallProduct";
-import ProductComponent from "../components/ProductComponent";
-// import chococake from "../images/chocolate-cake.jpg";
-import strawberry from "../images/strawberry.png";
-import chocoice from "../images/icecream.png";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Products = () => {
-  const [Product, setProduct] = useState("");
-  const fetchProduct = async () => {
-    const response = await fetch("/api/productRoute");
-    const json = await response.json();
-
-    if (json.status === 200) {
-      setProduct(json.data);
-      console.log(json.data);
-    }
-  };
+  const params =useParams()
+  const [Product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetchProduct();
+    axios
+      .get(`/api/productRoute/category/${params.categoryId}`)
+      .then((response) => {
+        setProduct(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
   return (
     <>
-      <div className="product-content">
-        <div className="products-title">
-          <h1>Cakes & Icecream</h1>
-        </div>
-        {Product && <Filter products={Product} />}
-
-        <div className="products">
-          <div className="first-product">
-            <div className="product-title">
-              <h4>Cakes</h4>
-            </div>
-            <div className="small-product">
-              <div className="product-description">
-                <img
-                  src={strawberry}
-                  alt="strawberry cake"
-                  className="product-image"
-                />
-                <div className="price">
-                  <p> 10$</p>
-                </div>
-                <p>
-                  {" "}
-                  featuring fresh strawberries in a moist vanilla base with
-                  strawberry-infused frosting.
-                </p>
-                <div className="review">
-                  <p>Review by Oula wehbi:</p>
-                  <p>Delicious treat.The cake was very amazing</p>
-                </div>
+      <div className="products-container">
+        {Product.map((products, index) => (
+          <div className="products">
+            <div className="products-content">
+            <Link className="links" to={`/product/${products._id}`} >
+              <img
+                className="products-image"
+                src={`http://localhost:4000/${products.images}`}
+              />
+            </Link>
+              <div className="products-name" key={index}>
+                "{products.productName}"
               </div>
-              <div className="product-description">
-                {/* <img src={chococake} alt="cake" className="product-image" /> */}
-                <div className="price">
-                  <p> 20$</p>
-                </div>
-
-                <p>
-                  featuring fresh strawberries in a moist vanilla base with
-                  strawberry-infused frosting.
-                </p>
-                <div className="review">
-                  <p>Review by moussa wehbi:</p>
-                  <p>Delicious treat.The cake was very delicious</p>
-                </div>
-              </div>
+              <div className="products-description">{products.description}</div>
+              <div className="products-price">{products.price}</div>
             </div>
           </div>
-          <div className="first-product">
-            <div className="product-title">
-              <h4>Icecream</h4>
-            </div>
-            <div className="small-product">
-              <div className="product-description">
-                <img
-                  src={chocoice}
-                  alt="choco icecream"
-                  className="product-image"
-                />
-                <div className="price">
-                  <p> 10$</p>
-                </div>
-                <p>
-                  {" "}
-                  featuring fresh strawberries in a moist vanilla base with
-                  strawberry-infused frosting.
-                </p>
-                <div className="review">
-                  <p>Review by Oula wehbi:</p>
-                  <p>Delicious treat.The cake was very amazing</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="product-description">
-              <img src={chocoice} alt="icecream" className="product-image" />
-              <div className="price">
-                <p> 20$</p>
-              </div>
-              <p>
-                {" "}
-                featuring fresh strawberries in a moist vanilla base with
-                strawberry-infused frosting.
-              </p>
-              <div className="review">
-                <p>Review by moussa wehbi:</p>
-                <p>Delicious treat.The cake was very delicious</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-
-      {/* <div className="cake-title">
-            <h4>Strawberry Cake</h4>
-            <img className="product-image" src={strawberry} alt="" />
-            <h4>Chocolate Ice Cream</h4>  
-            <img className="product-image" src={chocoice} alt="" />
-              </div>
-
-              </div>
-
-              {/* <h4>  {Product && Product.map((products)=>(
-                  <ProductComponent key={products._id} products={products.categoriesid}/>
-                ))
-              }</h4> */}
-      {/* {/*       </div> 
-             <div className="products-row">
-             {/* <SmallProduct />
-                <SmallProduct /> */}
-      {/* {Product &&
-              Product.map((products) => (
-              <ProductComponent key={products._id} products={products} />
-            // ))} */}
     </>
   );
 };
