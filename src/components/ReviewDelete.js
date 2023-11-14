@@ -10,7 +10,7 @@ const ReviewDelete = ({reviews}) => { //must rewrite it later in the right way, 
       const review = reviews.find((review) => review.name === name);
       // console.log(review)
 
-      const responseReview = await fetch("/api/reviewRoute/delete/" + review._id, {
+      const responseReview = await fetch("https://blooming-lb-7e6w.onrender.com/api/reviewRoute/delete/" + review._id, {
         method: "DELETE"
       });
       const jsonReview = await responseReview.json();

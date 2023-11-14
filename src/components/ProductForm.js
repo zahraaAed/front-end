@@ -15,7 +15,7 @@ const ProductForm = () => {
   const handleSubmitProduct = async (e) => {
     e.preventDefault();
     const product = { productName, description, categoriesId, flavours, bestSeller, price, image };
-    const responseProduct = await fetch("/api/productRoute/post", {
+    const responseProduct = await fetch("https://blooming-lb-7e6w.onrender.com/api/productRoute/post", {
       method: "POST",
       body: JSON.stringify(product),
       headers: {

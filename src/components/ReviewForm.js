@@ -9,7 +9,7 @@ const ReviewForm = ({productId}) => {
   const handleSubmitReview = async (e) => {
     // e.preventDefault();
     const review = { name, reviews, productsId };
-    const responseReview = await fetch("/api/reviewRoute/post", {
+    const responseReview = await fetch("https://blooming-lb-7e6w.onrender.com/api/reviewRoute/post", {
       method: "POST",
       body: JSON.stringify(review),
       headers: {

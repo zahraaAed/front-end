@@ -10,7 +10,7 @@ const Products = () => {
 
   useEffect(() => {
     axios
-      .get(`/api/productRoute/category/${params.categoryId}`)
+      .get(`https://blooming-lb-7e6w.onrender.com/api/productRoute/category/${params.categoryId}`)
       .then((response) => {
         setProduct(response.data);
       })

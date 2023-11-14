@@ -10,7 +10,7 @@ const ProductDelete = ({products}) => {
       const product = products.find((product) => product.productName === productName);
       // console.log(product)
 
-      const responseProduct = await fetch("/api/productRoute/delete/" + product._id, {
+      const responseProduct = await fetch("https://blooming-lb-7e6w.onrender.com/api/productRoute/delete/" + product._id, {
         method: "DELETE"
       });
       const jsonProduct = await responseProduct.json();

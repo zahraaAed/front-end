@@ -9,7 +9,7 @@ const About = () => {
 
   // useEffect(() => {
   //   const fetchAbout = async () => {
-  //     const responseAbout = await fetch("/api/aboutRoute/"); //remember to change URL after developement phase so every request points to the right end point
+  //     const responseAbout = await fetch("https://blooming-lb-7e6w.onrender.com/api/aboutRoute/"); //remember to change URL after developement phase so every request points to the right end point
   //     const jsonAbout = await responseAbout.json();
 
   //     if (responseAbout.ok) {

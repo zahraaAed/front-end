@@ -9,7 +9,7 @@ const CategoryDelete = ({categories}) => {
       e.preventDefault();
       const category = categories.find((category) => category.categoryName === categoryName);
 
-      const responseCategory = await fetch("/api/categoryRoute/delete/" + category._id, {
+      const responseCategory = await fetch("https://blooming-lb-7e6w.onrender.com/api/categoryRoute/delete/" + category._id, {
         method: "DELETE"
       });
       const jsonCategory = await responseCategory.json();

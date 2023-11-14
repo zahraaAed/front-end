@@ -8,7 +8,7 @@ const Categories = () => {
 
   useEffect(() => {
     const fetchCategories = async () => {
-      const responseCategories = await fetch("/api/categoryRoute/"); //remember to change URL after developement phase so every request points to the right end point
+      const responseCategories = await fetch("https://blooming-lb-7e6w.onrender.com/api/categoryRoute/"); //remember to change URL after developement phase so every request points to the right end point
       const jsonCategories = await responseCategories.json();
 
       if (responseCategories.ok) {

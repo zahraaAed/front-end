@@ -15,7 +15,7 @@ const Product = () => {
 
   const fetchProduct = async () => {
     const response = await fetch(
-      `/api/productRoute/product/${params.productId}`
+      `https://blooming-lb-7e6w.onrender.com/api/productRoute/product/${params.productId}`
     );
     if (response.status === 200) {
       const result = await response.json();
@@ -32,7 +32,7 @@ const Product = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       const responseReviews = await fetch(
-        `/api/reviewRoute/review/${params.productId}`
+        `https://blooming-lb-7e6w.onrender.com/api/reviewRoute/review/${params.productId}`
       );
       const json = await responseReviews.json();
 

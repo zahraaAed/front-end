@@ -7,7 +7,7 @@ const CategoryForm = () => {
   const handleSubmitCategory = async (e) => {
     e.preventDefault();
     const category = { categoryName };
-    const responseCategory = await fetch("/api/categoryRoute/post", {
+    const responseCategory = await fetch("https://blooming-lb-7e6w.onrender.com/api/categoryRoute/post", {
       method: "POST",
       body: JSON.stringify(category),
       headers: {

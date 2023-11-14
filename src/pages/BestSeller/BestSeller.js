@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const BestSeller = () => {
 const[products,setProducts] =useState([]);
   const fetchProduct = async () => {
-    const response = await fetch(`/api/productRoute/`);
+    const response = await fetch(`https://blooming-lb-7e6w.onrender.com/api/productRoute/`);
     if (response.status === 200) {
       const result = await response.json();
       setProducts(result);
@@ -24,7 +24,7 @@ const[products,setProducts] =useState([]);
             <Link className="links" to={`/product/${product._id}`} >
               <img
                 className="products-image"
-                src={`http://localhost:4000/${product.images}`}
+                src={`https://blooming-lb-7e6w.onrender.com/${product.images}`}
                 alt="product"
               />
             </Link>

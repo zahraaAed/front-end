@@ -15,7 +15,7 @@ const Admin = () => {
   const [categories, setCategories] = useState(null);
   useEffect(() => {
     const fetchCategories = async () => {
-      const responseCategories = await fetch("/api/categoryRoute/"); //remember to change URL after developement phase so every request points to the right end point
+      const responseCategories = await fetch("https://blooming-lb-7e6w.onrender.com/api/categoryRoute/"); //remember to change URL after developement phase so every request points to the right end point
       const jsonCategories = await responseCategories.json();
 
       if (responseCategories.ok) {
@@ -30,7 +30,7 @@ const Admin = () => {
   const [reviews, setReviews] = useState(null);
   useEffect(() => {
     const fetchReviews = async () => {
-      const responseReviews = await fetch("/api/reviewRoute/"); //remember to change URL after developement phase so every request points to the right end point
+      const responseReviews = await fetch("https://blooming-lb-7e6w.onrender.com/api/reviewRoute/"); //remember to change URL after developement phase so every request points to the right end point
       const jsonReviews = await responseReviews.json();
 
       if (responseReviews.ok) {
@@ -45,7 +45,7 @@ const Admin = () => {
 const [products, setProducts] = useState(null);
 useEffect(() => {
   const fetchProducts = async () => {
-    const responseProducts = await fetch("/api/productRoute/"); //remember to change URL after developement phase so every request points to the right end point
+    const responseProducts = await fetch("https://blooming-lb-7e6w.onrender.com/api/productRoute/"); //remember to change URL after developement phase so every request points to the right end point
     const jsonProducts = await responseProducts.json();
 
     if (responseProducts.ok) {
